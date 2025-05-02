@@ -4,13 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Html - Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      height: 100vh;
+      display: flex ;
+      flex-direction: column;
+    }
+
+    .navigasi {
+      height: 80px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+      background-color: rgb(80, 80, 80);
+      font-size: 20px;
+    }
+    
+    .navigasi > a {
+      margin-left: 10px;
+      margin-right: 10px;
+      text-decoration: none;
+      color: white;
+      margin-top: 20px;
+      transition: 0.15s;
+    }
+
+    .navigasi > a:hover {
+      color: crimson;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
 </head>
 <body>
-  <h2>Menu</h2>
   <div class="navigasi">
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="home.html" target="homeFrame">Home</a>
+    <a href="about.html" target="homeFrame">About</a>
+    <a href="contact.html" target="homeFrame">Contact</a>
   </div>
   <iframe src="home.html" name="homeFrame"></iframe>
 </body>
